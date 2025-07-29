@@ -64,10 +64,10 @@ PACKAGES="$PACKAGES luci-i18n-dufs-zh-cn"
 PACKAGES="$PACKAGES $CUSTOM_PACKAGES"
 
 # 判断是否需要编译 Docker 插件
-if [ "$INCLUDE_DOCKER" = "yes" ]; then
-    PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
-    echo "Adding package: luci-i18n-dockerman-zh-cn"
-fi
+#if [ "$INCLUDE_DOCKER" = "no" ]; then
+#    PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
+#    echo "Adding package: luci-i18n-dockerman-zh-cn"
+#fi
 
 # 若构建openclash 则添加内核
 if echo "$PACKAGES" | grep -q "luci-app-openclash"; then
